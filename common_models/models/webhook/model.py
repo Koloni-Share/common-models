@@ -1,5 +1,5 @@
 from enum import Enum
-from typing import Optional
+from typing import Optional, TYPE_CHECKING
 from uuid import UUID
 
 from common_models.models.device.model import Device, Status
@@ -8,8 +8,9 @@ from sqlalchemy import Column, func
 from sqlmodel import Field, SQLModel
 from sqlmodel.sql.sqltypes import GUID
 
-from common_models.models.event.model import Event, EventStatus
-from common_models.models.reservations.model import Reservation
+if TYPE_CHECKING:
+    from common_models.models.event.model import Event, EventStatus
+    from common_models.models.reservations.model import Reservation
 
 
 class WebhookStatus(Enum):

@@ -1,6 +1,6 @@
 from datetime import datetime
 from enum import Enum
-from typing import Optional
+from typing import Optional, TYPE_CHECKING
 from uuid import UUID
 
 # pylint: disable=no-name-in-module
@@ -10,8 +10,9 @@ from sqlalchemy.dialects.postgresql import BOOLEAN
 from sqlmodel import Field, Relationship, SQLModel
 from sqlmodel.sql.sqltypes import GUID, AutoString
 
-from common_models.models.login.model import Channel
-from common_models.models.organization.model import LinkOrgUser
+if TYPE_CHECKING:
+    from common_models.models.login.model import Channel
+    from common_models.models.organization.model import LinkOrgUser
 
 
 class User(SQLModel, table=True):

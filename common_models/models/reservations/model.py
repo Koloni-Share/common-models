@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import List, Optional
+from typing import List, Optional, TYPE_CHECKING
 from uuid import UUID
 
 from common_models.models.device.model import Device, Mode
@@ -8,11 +8,12 @@ from sqlalchemy import Boolean, Column, DateTime, ForeignKey, String, func
 from sqlmodel import Field, Relationship, SQLModel
 from sqlmodel.sql.sqltypes import GUID
 
-from common_models.models.location.model import Location
-from common_models.models.products.model import Product
-from common_models.models.settings.model import ResTimeUnit
-from common_models.models.size.model import Size
-from common_models.models.user.model import User
+if TYPE_CHECKING:
+    from common_models.models.location.model import Location
+    from common_models.models.products.model import Product
+    from common_models.models.settings.model import ResTimeUnit
+    from common_models.models.size.model import Size
+    from common_models.models.user.model import User
 
 
 class Reservation(SQLModel, table=True):

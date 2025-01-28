@@ -1,5 +1,6 @@
 from datetime import datetime
 from enum import Enum
+from typing import TYPE_CHECKING
 from uuid import UUID
 
 from pydantic import BaseModel
@@ -7,8 +8,9 @@ from sqlalchemy import Column, ForeignKey
 from sqlmodel import Field, SQLModel
 from sqlmodel.sql.sqltypes import GUID
 
-from common_models.models.location.model import Location
-from common_models.models.user.model import User
+if TYPE_CHECKING:
+    from common_models.models.location.model import Location
+    from common_models.models.user.model import User
 
 
 class ResourceType(Enum):

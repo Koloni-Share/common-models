@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import List, Optional
+from typing import List, Optional, TYPE_CHECKING
 from uuid import UUID
 
 from pydantic import BaseModel, constr, validator
@@ -8,8 +8,9 @@ from sqlmodel import Field, Relationship, SQLModel
 from sqlmodel.sql.sqltypes import GUID
 from common_models.util.form import as_form
 
-from common_models.models.products.model import PaginatedProducts, Product
-from common_models.models.size.model import Size
+if TYPE_CHECKING:
+    from common_models.models.products.model import PaginatedProducts, Product
+    from common_models.models.size.model import Size
 
 
 class ProductGroup(SQLModel, table=True):

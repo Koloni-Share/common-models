@@ -1,7 +1,7 @@
 import json
 from datetime import datetime
 from enum import Enum
-from typing import Optional
+from typing import Optional, TYPE_CHECKING
 from uuid import UUID
 
 from pydantic import BaseModel, condecimal, constr, validator
@@ -10,13 +10,13 @@ from sqlalchemy import Column, DateTime, Integer, String, func
 from sqlalchemy.dialects.postgresql import JSONB
 from sqlmodel import Field, Relationship, SQLModel
 from sqlmodel.sql.sqltypes import GUID
-
-
-from common_models.models.price.model import Price
-from common_models.models.products.condition import ProductCondition
-from common_models.models.size.model import Size
-from common_models.models.device.link_device_price import LinkDevicePrice
 from common_models.util.form import as_form
+
+if TYPE_CHECKING:
+    from common_models.models.price.model import Price
+    from common_models.models.products.condition import ProductCondition
+    from common_models.models.size.model import Size
+    from common_models.models.device.link_device_price import LinkDevicePrice
 
 
 class LocationRead(BaseModel):

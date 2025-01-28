@@ -1,9 +1,10 @@
-from typing import Optional
+from typing import Optional, TYPE_CHECKING
 from uuid import UUID
 
 from pydantic import BaseModel
 
-from common_models.models.member.model import PermissionType, RoleType
+if TYPE_CHECKING:
+    from common_models.models.member.model import PermissionType, RoleType
 
 
 class RoleCreate(BaseModel):

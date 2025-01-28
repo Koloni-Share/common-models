@@ -10,10 +10,10 @@ from sqlmodel.sql.sqltypes import GUID
 
 if TYPE_CHECKING:
     from common_models.models.location.model import Location
-from common_models.models.organization.model import LinkOrgUser
-from common_models.models.price.model import Currency
-from common_models.models.user.model import User
-from common_models.models.memberships.link_membership_location import LinkMembershipLocation
+    from common_models.models.organization.model import LinkOrgUser
+    from common_models.models.price.model import Currency
+    from common_models.models.user.model import User
+    from common_models.models.memberships.link_membership_location import LinkMembershipLocation
 
 
 class BillingType(Enum):

@@ -1,6 +1,6 @@
 from datetime import datetime
 from enum import Enum
-from typing import Optional
+from typing import Optional, TYPE_CHECKING
 from uuid import UUID
 
 from pydantic import BaseModel
@@ -8,9 +8,9 @@ from sqlalchemy import Column, DateTime, ForeignKey, func
 from sqlmodel import Field, Relationship, SQLModel
 from sqlmodel.sql.sqltypes import GUID
 
-from common_models.models.conditions.model import Condition
-
-from common_models.models.user.model import User
+if TYPE_CHECKING:
+    from common_models.models.conditions.model import Condition
+    from common_models.models.user.model import User
 
 
 class State(Enum):

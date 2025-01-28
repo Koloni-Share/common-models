@@ -1,6 +1,6 @@
 import datetime
 from enum import Enum
-from typing import Annotated, List, Optional
+from typing import Annotated, List, Optional, TYPE_CHECKING
 from uuid import UUID
 
 from pydantic import BaseModel, conint, constr
@@ -9,7 +9,8 @@ from sqlalchemy.dialects.postgresql import ARRAY, VARCHAR
 from sqlmodel import Field, SQLModel
 from sqlmodel.sql.sqltypes import GUID
 
-from common_models.models.member.model import Member
+if TYPE_CHECKING:
+    from common_models.models.member.model import Member
 
 EMAIL_BODY = """
     Greetings {user_name},

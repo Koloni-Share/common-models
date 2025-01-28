@@ -1,6 +1,6 @@
 from datetime import datetime
 from enum import Enum
-from typing import Optional
+from typing import Optional, TYPE_CHECKING
 from uuid import UUID
 
 from pydantic import BaseModel, validator
@@ -10,9 +10,10 @@ from sqlmodel import Field, Relationship, SQLModel
 from sqlmodel.sql.sqltypes import GUID, AutoString
 from common_models.util.form import as_form
 
-from common_models.models.event.model import Event
-from common_models.models.member.model import Member
-from common_models.models.user.model import User
+if TYPE_CHECKING:
+    from common_models.models.event.model import Event
+    from common_models.models.member.model import Member
+    from common_models.models.user.model import User
 
 
 class IssueStatus(Enum):

@@ -1,7 +1,7 @@
 from datetime import datetime
 from decimal import Decimal
 from enum import Enum, StrEnum
-from typing import Optional
+from typing import Optional, TYPE_CHECKING
 from uuid import UUID
 
 from common_models.models.device.model import Device
@@ -11,10 +11,11 @@ from sqlalchemy import Column, DateTime, func
 from sqlmodel import Field, Relationship, SQLModel
 from sqlmodel.sql.sqltypes import GUID
 
-from common_models.models.memberships.model import Membership
-from common_models.models.promo.model import Promo
-from common_models.models.reservations.model import Reservation
-from common_models.models.user.model import User
+if TYPE_CHECKING:
+    from common_models.models.memberships.model import Membership
+    from common_models.models.promo.model import Promo
+    from common_models.models.reservations.model import Reservation
+    from common_models.models.user.model import User
 
 
 class EventResponse(BaseModel):
