@@ -1,5 +1,5 @@
 from datetime import datetime
-from typing import List, Optional
+from typing import List, Optional, TYPE_CHECKING
 from uuid import UUID
 
 from common_models.models.device.model import Device, Restriction
@@ -10,7 +10,8 @@ from sqlmodel import Field, Relationship, SQLModel
 from sqlmodel.sql.sqltypes import GUID
 from common_models.util.form import as_form
 
-from common_models.models.memberships.model import LinkMembershipLocation
+if TYPE_CHECKING:
+    from common_models.models.memberships.model import LinkMembershipLocation
 from common_models.models.notifications.model import LinkNotificationLocation
 from common_models.models.price.model import Price
 
