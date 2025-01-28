@@ -1,5 +1,6 @@
 anyio==4.8.0
 fastapi==0.85.0
+fastapi-async-sqlalchemy==0.3.12
 idna==3.10
 pydantic==1.10.17
 setuptools==75.8.0

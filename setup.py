@@ -5,6 +5,7 @@ setup(
     version="0.1.0",
     packages=find_packages(),
     install_requires=[
+        "fastapi-async-sqlalchemy==0.3.12",
         "fastapi==0.85.0",
         "pydantic==1.10.17",
         "sqlalchemy==1.4.41",
