@@ -98,7 +98,7 @@ class Notification(SQLModel, table=True):
     header: Optional[str] = Field(nullable=True)
     location_message: Optional[str] = Field(nullable=True)
 
-    mode: EventType = Field(nullable=False)
+    mode: "EventType" = Field(nullable=False)
 
     notification_type: NotificationType = Field(nullable=False)
 
