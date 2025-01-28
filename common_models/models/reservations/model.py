@@ -8,12 +8,11 @@ from sqlalchemy import Boolean, Column, DateTime, ForeignKey, String, func
 from sqlmodel import Field, Relationship, SQLModel
 from sqlmodel.sql.sqltypes import GUID
 
-if TYPE_CHECKING:
-    from common_models.models.location.model import Location
-    from common_models.models.products.model import Product
-    from common_models.models.settings.model import ResTimeUnit
-    from common_models.models.size.model import Size
-    from common_models.models.user.model import User
+from common_models.models.location.model import Location
+from common_models.models.products.model import Product
+from common_models.models.settings.model import ResTimeUnit
+from common_models.models.size.model import Size
+from common_models.models.user.model import User
 
 
 class Reservation(SQLModel, table=True):

@@ -9,8 +9,8 @@ from sqlalchemy.dialects.postgresql import ARRAY, VARCHAR
 from sqlmodel import Field, SQLModel
 from sqlmodel.sql.sqltypes import GUID
 
-if TYPE_CHECKING:
-    from common_models.models.member.model import Member
+
+from common_models.models.member.model import Member
 
 EMAIL_BODY = """
     Greetings {user_name},

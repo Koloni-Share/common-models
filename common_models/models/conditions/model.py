@@ -6,9 +6,8 @@ from pydantic import BaseModel
 from sqlalchemy import Column, DateTime, func
 from sqlmodel import Field, Relationship, SQLModel
 
-if TYPE_CHECKING:
-    from common_models.models.products.model import Product
-    from common_models.models.conditions.link_product_condition import ConditionProductLink
+from common_models.models.products.model import Product
+from common_models.models.conditions.link_product_condition import ConditionProductLink
 
 
 class Condition(SQLModel, table=True):

@@ -8,9 +8,8 @@ from sqlalchemy import Column, DateTime, ForeignKey, func
 from sqlmodel import Field, Relationship, SQLModel
 from sqlmodel.sql.sqltypes import GUID
 
-if TYPE_CHECKING:
-    from common_models.models.conditions.model import Condition
-    from common_models.models.user.model import User
+from common_models.models.conditions.model import Condition
+from common_models.models.user.model import User
 
 
 class State(Enum):

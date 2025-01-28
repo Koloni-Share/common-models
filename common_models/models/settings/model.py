@@ -10,10 +10,9 @@ from sqlmodel import Field, SQLModel
 from sqlmodel.sql.sqltypes import GUID
 from common_models.util.form import as_form
 
-if TYPE_CHECKING:
-    from common_models.models.financial.model import StripeCountry
-    from common_models.models.location.model import Location
-    from common_models.models.price.model import Currency
+from common_models.models.financial.model import StripeCountry
+from common_models.models.location.model import Location
+from common_models.models.price.model import Currency
 
 
 class ResTimeUnit(Enum):

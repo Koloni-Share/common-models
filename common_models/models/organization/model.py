@@ -8,9 +8,8 @@ from sqlmodel import Field, Relationship, SQLModel
 from sqlmodel.sql.sqltypes import GUID
 from common_models.util.form import as_form
 
-if TYPE_CHECKING:
-    from common_models.models.location.model import Location
-    from common_models.models.white_label.model import WhiteLabel
+from common_models.models.location.model import Location
+from common_models.models.white_label.model import WhiteLabel
 
 
 class Org(SQLModel, table=True):

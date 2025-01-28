@@ -9,11 +9,10 @@ from sqlmodel import Field, Relationship, SQLModel
 from sqlmodel.sql.sqltypes import GUID
 from common_models.util.form import as_form
 
-if TYPE_CHECKING:
-    from common_models.models.conditions.link_product_condition import ConditionProductLink
-    from common_models.models.product_tracking.product_tracking import ProductTracking
-    from common_models.models.products.condition import ProductCondition
-    from common_models.models.conditions.model import Condition
+from common_models.models.conditions.link_product_condition import ConditionProductLink
+from common_models.models.product_tracking.product_tracking import ProductTracking
+from common_models.models.products.condition import ProductCondition
+from common_models.models.conditions.model import Condition
 
 
 class Product(SQLModel, table=True):

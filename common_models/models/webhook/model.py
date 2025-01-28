@@ -8,9 +8,8 @@ from sqlalchemy import Column, func
 from sqlmodel import Field, SQLModel
 from sqlmodel.sql.sqltypes import GUID
 
-if TYPE_CHECKING:
-    from common_models.models.event.model import Event, EventStatus
-    from common_models.models.reservations.model import Reservation
+from common_models.models.event.model import Event, EventStatus
+from common_models.models.reservations.model import Reservation
 
 
 class WebhookStatus(Enum):

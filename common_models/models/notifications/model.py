@@ -9,11 +9,10 @@ from sqlmodel import Field, Relationship, SQLModel
 from sqlmodel.sql.sqltypes import GUID
 from common_models.util.api_func import PaginationInfo
 
-if TYPE_CHECKING:
-    from common_models.models.event.model import EventType
-    from common_models.models.location.model import Location
-    from common_models.models.member.model import Member
-    from common_models.models.notifications.link_notification_location import LinkNotificationLocation
+from common_models.models.event.model import EventType
+from common_models.models.location.model import Location
+from common_models.models.member.model import Member
+from common_models.models.notifications.link_notification_location import LinkNotificationLocation
 
 
 class RecipientType(Enum):

@@ -3,8 +3,7 @@ from uuid import UUID
 
 from pydantic import BaseModel
 
-if TYPE_CHECKING:
-    from common_models.models.member.model import PermissionType, RoleType
+from common_models.models.member.model import PermissionType, RoleType
 
 
 class RoleCreate(BaseModel):

@@ -8,8 +8,7 @@ from sqlalchemy import Column, DateTime, func
 from sqlmodel import Field, Relationship, SQLModel
 from sqlmodel.sql.sqltypes import GUID
 
-if TYPE_CHECKING:
-    from common_models.models.device.link_device_price import LinkDevicePrice
+from common_models.models.device.link_device_price import LinkDevicePrice
 
 
 class Unit(Enum):

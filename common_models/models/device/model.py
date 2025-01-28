@@ -12,11 +12,10 @@ from sqlmodel import Field, Relationship, SQLModel
 from sqlmodel.sql.sqltypes import GUID
 from common_models.util.form import as_form
 
-if TYPE_CHECKING:
-    from common_models.models.price.model import Price
-    from common_models.models.products.condition import ProductCondition
-    from common_models.models.size.model import Size
-    from common_models.models.device.link_device_price import LinkDevicePrice
+from common_models.models.price.model import Price
+from common_models.models.products.condition import ProductCondition
+from common_models.models.size.model import Size
+from common_models.models.device.link_device_price import LinkDevicePrice
 
 
 class LocationRead(BaseModel):

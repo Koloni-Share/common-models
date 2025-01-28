@@ -1,8 +1,7 @@
 from datetime import datetime
 from typing import Optional, TYPE_CHECKING
 from uuid import UUID
-if TYPE_CHECKING:
-    from common_models.models.device.model import Device
+from common_models.models.device.model import Device
 from pydantic import AnyHttpUrl, BaseModel, conint, constr
 from sqlalchemy import JSON, Column
 from sqlmodel import Field, Relationship, SQLModel

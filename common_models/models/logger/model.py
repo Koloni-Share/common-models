@@ -8,8 +8,7 @@ from sqlalchemy import Column, ForeignKey, func
 from sqlmodel import Field, Relationship, SQLModel
 from sqlmodel.sql.sqltypes import GUID
 
-if TYPE_CHECKING:
-    from common_models.models.event.model import Event
+from common_models.models.event.model import Event
 
 
 class LogType(Enum):

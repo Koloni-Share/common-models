@@ -10,9 +10,8 @@ from sqlalchemy.dialects.postgresql import BOOLEAN
 from sqlmodel import Field, Relationship, SQLModel
 from sqlmodel.sql.sqltypes import GUID, AutoString
 
-if TYPE_CHECKING:
-    from common_models.models.login.model import Channel
-    from common_models.models.organization.model import LinkOrgUser
+from common_models.models.login.model import Channel
+from common_models.models.organization.model import LinkOrgUser
 
 
 class User(SQLModel, table=True):
