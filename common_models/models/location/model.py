@@ -10,7 +10,7 @@ from sqlmodel import Field, Relationship, SQLModel
 from sqlmodel.sql.sqltypes import GUID
 from common_models.util.form import as_form
 
-from common_models.models.memberships.model import LinkMembershipLocation
+# from common_models.models.memberships.model import LinkMembershipLocation
 from common_models.models.notifications.model import LinkNotificationLocation
 from common_models.models.price.model import Price
 
@@ -80,7 +80,7 @@ class Location(SQLModel, table=True):
 
     memberships: list["Membership"] = Relationship(  # noqa: F821
         back_populates="locations",
-        link_model=LinkMembershipLocation,
+        link_model="LinkMembershipLocation",
         sa_relationship_kwargs={"lazy": "noload"},
     )
 
